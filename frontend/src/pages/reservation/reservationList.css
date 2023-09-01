@@ -1,0 +1,82 @@
+.reservationList {
+    flex: 6;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .reservationListItem {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .reservationListItemInfo {
+    display: flex;
+    align-items: center;
+  }
+
+  .reservationListItemImg {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+
+  .reservationListItemName {
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  .reservationListItemDate {
+    font-weight: bold;
+    font-size: 16px;
+    color: #777;
+  }
+
+  .reservationListItemActions {
+    display: flex;
+  }
+
+  .reservationListEdit {
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #3bb077;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .reservationListDelete {
+    color: red;
+    cursor: pointer;
+  }
+.ReservationListView{
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #3bb077;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.ReservationListContinuePayment{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #226ca2;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}

@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: server
+    ports:
+      - "5000:5000"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    networks:
+      - backend_network
+      - mysql_network
+    depends_on:
+      - mysql
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: client
+    ports:
+      - "3000:3000"
+    networks:
+      - frontend_network
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: qwe123qwe123
+      MYSQL_DATABASE: comp3102schema
+      MYSQL_PASSWORD: qwe123qwe123
+    networks:
+      - backend_network
+      - mysql_network
+
+networks:
+  backend_network:
+    driver: bridge
+
+  frontend_network:
+    driver: bridge
+
+  mysql_network:
+    driver: bridge

@@ -1,0 +1,32 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+      nodejs: 16
+  build:
+    commands:
+      - cd Backend
+      - echo Building Spring Boot project...
+      - mvn clean package
+      - cd ../frontend
+      - echo Installing frontend dependencies...
+      - npm install
+      - echo Building frontend project...
+      - npm run build
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - aws s3 sync build s3://frontend-camolug-deployment --delete
+artifacts:
+  files:
+    - '**/*'
+    - '!frontend/**/*'
+  base-directory: 'Backend/target'
+deploy:
+  artifact: Backend/target/*.jar
+  provider: ElasticBeanstalk
+  region: us-east-1
+  app_name: back-end-camlolug-dev
+  env_name: Back-end-camlolug-dev-env

@@ -1,0 +1,134 @@
+.newCar {
+    flex: 4;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.newCarTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.newCarForm {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newCarItem {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.newCarItem > label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.newCarItem > input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.newCarGender {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.newCarGender input {
+    margin-right: 5px;
+}
+
+.newCarGender label {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #555;
+}
+
+.newCarButton {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: var(--primary-500);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.file-input {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.file-input label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.file-input input[type="file"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.file-input input[type="file"]:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.file-input input[type="file"]::-webkit-file-upload-button {
+    background: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.file-input input[type="file"]::-webkit-file-upload-button:hover {
+    background: #45a049;
+}
+
+.file-input input[type="file"]::-webkit-file-upload-button:active {
+    background: #3c9039;
+}
+.newCarItem select {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    appearance: none; /* Remove default arrow icon */
+    background-color: #fff; /* Set background color */
+    background-image: url("../../../assets/images/down-arrow.png"); /* Replace with your arrow icon path */
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 12px; /* Adjust the size of the arrow icon as needed */
+    padding-right: 30px; /* Add space for the arrow icon */
+}
+
+.newCarItem select:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.newCarItem select option {
+    padding: 5px;
+    background-color: #fff;
+    color: #555;
+}
+
